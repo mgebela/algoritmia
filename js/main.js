@@ -15,6 +15,11 @@ const galleryImages = [
   { src: 'images/gallery/radionica-14.jpg', alt: 'Prezentacija rada pred grupom' },
   { src: 'images/gallery/radionica-15.jpg', alt: 'Timski rad s robotima' },
   { src: 'images/gallery/radionica-16.jpg', alt: 'Sastavljanje LEGO Education robota' },
+  { src: 'images/gallery/radionica-17.jpg', alt: 'Grupni rad oko LEGO Spike Prime robota u učionici' },
+  { src: 'images/gallery/radionica-18.jpg', alt: 'Voditelj objašnjava koncepte na ploči s dijagramom srca' },
+  { src: 'images/gallery/radionica-19.jpg', alt: 'Planiranje scene na bijeloj ploči uz sastavljanje robota' },
+  { src: 'images/gallery/radionica-20.jpg', alt: 'Dva robota na crvenom srcu — susret Romea i Julije' },
+  { src: 'images/gallery/radionica-21.jpg', alt: 'Robot s mobitelom za izraz lica i zvuk' },
 ];
 
 const gallery = document.getElementById('gallery');
