@@ -124,7 +124,7 @@ ul { list-style: none; }
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: center 35%;
   transform: scale(1.05);
   transition: transform 8s ease;
 }
