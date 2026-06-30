@@ -7,71 +7,155 @@
   <title>Algoritmija — Romeo i Julija: Algoritmi i roboti u umjetnosti</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="stars" aria-hidden="true"></div>
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <span class="top-bar-tag">STEM + Umjetnost</span>
+      <span class="top-bar-divider" aria-hidden="true"></span>
+      <span>Dobna skupina 10–15 godina</span>
+      <span class="top-bar-divider" aria-hidden="true"></span>
+      <span>Do 10 polaznika po radionici</span>
+    </div>
+  </div>
 
   <header class="site-header" id="top">
     <nav class="nav container">
-      <a href="#top" class="logo">Algoritmija</a>
+      <a href="#top" class="logo">
+        <span class="logo-mark" aria-hidden="true">A</span>
+        Algoritmija
+      </a>
       <button class="nav-toggle" aria-label="Otvori izbornik" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
         <li><a href="#o-projektu">O projektu</a></li>
-        <li><a href="#ciljevi">Ciljevi</a></li>
-        <li><a href="#aktivnosti">Aktivnosti</a></li>
+        <li><a href="#ciljevi">Ishodi</a></li>
+        <li><a href="#aktivnosti">Program</a></li>
         <li><a href="#galerija">Galerija</a></li>
       </ul>
+      <a href="#aktivnosti" class="btn btn-primary btn-sm nav-cta">Pogledaj program</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-bg" style="background-image: url('images/hero.jpg')"></div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <p class="hero-eyebrow">Edukativni projekt</p>
-        <h1>Romeo i Julija:<br><em>Algoritmi i roboti u umjetnosti</em></h1>
-        <p class="hero-lead">
-          Radionica koja spaja kazališnu umjetnost i tehnologiju — polaznici programiraju robote
-          s ljudskim izrazima lica i zvukom kako bi postavili scene iz klasične predstave.
-        </p>
-        <div class="hero-actions">
-          <a href="#o-projektu" class="btn btn-primary">Saznaj više</a>
-          <a href="#galerija" class="btn btn-ghost">Pogledaj galeriju</a>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badges">
+            <span class="pill pill-blue">Edukativni program</span>
+            <span class="pill pill-outline">Romeo i Julija</span>
+          </div>
+          <h1>Algoritmi i roboti u umjetnosti</h1>
+          <p class="hero-lead">
+            Interdisciplinarna radionica koja spaja kazalište, programiranje i robotiku.
+            Polaznici grade, programiraju i izvode scene uz robote s izrazima lica i zvukom.
+          </p>
+          <ul class="hero-checklist">
+            <li>Učenje kroz projekt i timski rad</li>
+            <li>LEGO Education roboti i blokovsko programiranje</li>
+            <li>Prezentacija rada pred publikom</li>
+          </ul>
+          <div class="hero-actions">
+            <a href="#o-projektu" class="btn btn-primary">Saznaj više</a>
+            <a href="#galerija" class="btn btn-secondary">Galerija radionice</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img src="images/hero.jpg" alt="Učenici na radionici robotike u učionici" width="640" height="480">
+          </div>
+          <div class="hero-float-card hero-float-card--age">
+            <span class="float-value">10–15</span>
+            <span class="float-label">godina</span>
+          </div>
+          <div class="hero-float-card hero-float-card--phases">
+            <span class="float-value">3</span>
+            <span class="float-label">faze programa</span>
+          </div>
         </div>
       </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <span>Skrolaj</span>
-        <div class="scroll-line"></div>
+    </section>
+
+    <section class="trust-band" aria-label="Ključni podaci o programu">
+      <div class="container trust-grid">
+        <div class="trust-item reveal">
+          <span class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </span>
+          <div>
+            <strong>10</strong>
+            <span>polaznika po grupi</span>
+          </div>
+        </div>
+        <div class="trust-item reveal">
+          <span class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+          </span>
+          <div>
+            <strong>4</strong>
+            <span>robota s ekspresijama</span>
+          </div>
+        </div>
+        <div class="trust-item reveal">
+          <span class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </span>
+          <div>
+            <strong>STEM</strong>
+            <span>+ kazališna umjetnost</span>
+          </div>
+        </div>
+        <div class="trust-item reveal">
+          <span class="trust-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </span>
+          <div>
+            <strong>3</strong>
+            <span>faze učenja</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="section" id="o-projektu">
       <div class="container split">
+        <div class="split-media reveal">
+          <img src="images/gallery/radionica-07.jpg" alt="Sudionici radionice u grupnoj raspravi" loading="lazy">
+          <div class="split-caption">Učenje kroz suradnju i razmjenu ideja</div>
+        </div>
         <div class="split-text reveal">
           <span class="section-label">O projektu</span>
           <h2>Kada se algoritam šalje u svemir</h2>
           <p>
             Projekt je inspiriran predstavom <strong>„Romeo i Julija"</strong>, u kojoj se središnja tema
             vrti oko slanja algoritma ovog klasičnog djela u svemir. Nakon odgledane predstave,
-            polaznici radionice imaju priliku kroz programiranje postaviti dio predstave uz pomoć
-            robota opremljenih ljudskim izrazima lica i zvukom.
+            polaznici kroz programiranje postavljaju dio predstave uz robote opremljene ljudskim
+            izrazima lica i zvukom.
           </p>
           <p>
-            Kroz ovu interaktivnu aktivnost polaznici ne samo unapređuju tehničke vještine, već i
-            razvijaju dublje razumijevanje kako tehnologija može interpretirati i prenijeti složene
-            ideje kroz umjetnički izraz.
+            Kroz ovu aktivnost polaznici unapređuju tehničke vještine i razvijaju razumijevanje
+            kako tehnologija može interpretirati složene ideje kroz umjetnički izraz.
           </p>
-        </div>
-        <div class="split-media reveal">
-          <img src="images/gallery/radionica-07.jpg" alt="Sudionici radionice u grupnoj raspravi" loading="lazy">
-          <div class="split-badge">
-            <span class="badge-number">10–15</span>
-            <span class="badge-text">godina</span>
+          <div class="method-strip">
+            <div class="method-item">
+              <span class="method-num">01</span>
+              <span>Doživljaj</span>
+            </div>
+            <div class="method-item">
+              <span class="method-num">02</span>
+              <span>Istraživanje</span>
+            </div>
+            <div class="method-item">
+              <span class="method-num">03</span>
+              <span>Stvaranje</span>
+            </div>
+            <div class="method-item">
+              <span class="method-num">04</span>
+              <span>Prezentacija</span>
+            </div>
           </div>
         </div>
       </div>
@@ -80,29 +164,34 @@
     <section class="section section-alt" id="ciljevi">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">Ciljevi</span>
+          <span class="section-label">Ishodi učenja</span>
           <h2>Što polaznici stječu</h2>
+          <p class="section-desc">Jasno definirane kompetencije — kao u vodećim STEM i STEAM programima diljem svijeta.</p>
         </div>
-        <div class="cards">
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">⟨/⟩</div>
+        <div class="outcome-grid">
+          <article class="outcome-card reveal">
+            <div class="outcome-num">01</div>
             <h3>Algoritmi u praksi</h3>
-            <p>Kroz programiranje sudionici uče osnovne koncepte algoritama i njihovu važnost u svakodnevnom životu.</p>
+            <p>Polaznici uče osnovne koncepte algoritama kroz konkretan projekt, ne samo teoriju.</p>
+            <span class="outcome-tag">Računalno razmišljanje</span>
           </article>
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">♪</div>
+          <article class="outcome-card reveal">
+            <div class="outcome-num">02</div>
             <h3>Umjetnost i tehnologija</h3>
-            <p>Projekt pokazuje kako se tehnologija može koristiti za interpretaciju i prijenos složenih umjetničkih djela.</p>
+            <p>Tehnologija postaje alat za interpretaciju i prijenos složenih umjetničkih djela.</p>
+            <span class="outcome-tag">STEAM pristup</span>
           </article>
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">⚙</div>
+          <article class="outcome-card reveal">
+            <div class="outcome-num">03</div>
             <h3>Kreativne vještine</h3>
-            <p>Sudionici unapređuju vještine programiranja, robotike i scenskog izraza kroz praktičan rad.</p>
+            <p>Programiranje, robotika i scenski izraz razvijaju se kroz praktičan, timski rad.</p>
+            <span class="outcome-tag">Projektno učenje</span>
           </article>
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">✦</div>
+          <article class="outcome-card reveal">
+            <div class="outcome-num">04</div>
             <h3>Inovativno učenje</h3>
-            <p>Promoviramo pristupe u obrazovanju koji kombiniraju umjetnost i tehnologiju na nov način.</p>
+            <p>Program promiče pristup koji spaja humanističke i tehničke discipline.</p>
+            <span class="outcome-tag">Interdisciplinarnost</span>
           </article>
         </div>
       </div>
@@ -111,65 +200,71 @@
     <section class="section" id="aktivnosti">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-label">Aktivnosti</span>
+          <span class="section-label">Kurikulum</span>
           <h2>Tri faze radionice</h2>
+          <p class="section-desc">Strukturirani program — od predstave do javne prezentacije rada.</p>
         </div>
-        <ol class="timeline">
-          <li class="timeline-item reveal">
-            <div class="timeline-marker">01</div>
-            <div class="timeline-content">
-              <h3>Priprema i edukacija</h3>
-              <p>
-                Sudionici prvo odgledaju predstavu „Romeo i Julija" u kojoj se istražuje koncept
-                slanja algoritma djela u svemir. Nakon predstave slijedi kratko predavanje o
-                osnovama algoritama i njihovoj primjeni.
-              </p>
+        <div class="module-grid">
+          <article class="module-card reveal">
+            <div class="module-header">
+              <span class="module-step">Faza 1</span>
+              <span class="module-duration">Uvod</span>
             </div>
-          </li>
-          <li class="timeline-item reveal">
-            <div class="timeline-marker">02</div>
-            <div class="timeline-content">
-              <h3>Radionica s robotima</h3>
-              <p>
-                Polaznici koriste robote opremljene ljudskim izrazima lica i zvukom. Kroz
-                programiranje postavljaju odabrane scene iz predstave, interpretirajući ih na nov
-                način uz pomoć tehnologije.
-              </p>
-              <img src="images/gallery/radionica-16.jpg" alt="Sastavljanje LEGO Education robota" loading="lazy" class="timeline-img">
+            <h3>Priprema i edukacija</h3>
+            <p>
+              Sudionici odgledaju predstavu „Romeo i Julija" i istražuju koncept slanja algoritma
+              djela u svemir. Slijedi kratko predavanje o osnovama algoritama.
+            </p>
+            <ul class="module-list">
+              <li>Kazališni doživljaj</li>
+              <li>Uvod u algoritme</li>
+              <li>Postavljanje zadatka</li>
+            </ul>
+          </article>
+          <article class="module-card module-card--featured reveal">
+            <div class="module-header">
+              <span class="module-step">Faza 2</span>
+              <span class="module-duration">Radionica</span>
             </div>
-          </li>
-          <li class="timeline-item reveal">
-            <div class="timeline-marker">03</div>
-            <div class="timeline-content">
-              <h3>Prezentacija rezultata</h3>
-              <p>
-                Na kraju radionice sudionici prezentiraju svoje radove publici, demonstrirajući kako
-                su pomoću algoritama i robotike uspješno rekreirali dio predstave.
-              </p>
+            <h3>Rad s robotima</h3>
+            <p>
+              Polaznici koriste robote s izrazima lica i zvukom. Kroz programiranje postavljaju
+              odabrane scene iz predstave na nov, tehnološki način.
+            </p>
+            <img src="images/gallery/radionica-16.jpg" alt="Sastavljanje LEGO Education robota" loading="lazy" class="module-img">
+            <ul class="module-list">
+              <li>LEGO Education roboti</li>
+              <li>Blokovsko programiranje</li>
+              <li>Timski rad</li>
+            </ul>
+          </article>
+          <article class="module-card reveal">
+            <div class="module-header">
+              <span class="module-step">Faza 3</span>
+              <span class="module-duration">Završetak</span>
             </div>
-          </li>
-        </ol>
+            <h3>Prezentacija rezultata</h3>
+            <p>
+              Sudionici prezentiraju radove publici i demonstriraju kako su pomoću algoritama
+              i robotike rekreirali dio predstave.
+            </p>
+            <ul class="module-list">
+              <li>Javna prezentacija</li>
+              <li>Refleksija rada</li>
+              <li>Razmjena iskustava</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="section section-stats">
-      <div class="container stats-grid reveal">
-        <div class="stat">
-          <span class="stat-value">10–15</span>
-          <span class="stat-label">Dobna skupina</span>
+    <section class="cta-band">
+      <div class="container cta-inner reveal">
+        <div>
+          <h2>Umjetnost i tehnologija u jednom programu</h2>
+          <p>Inspiracija klasičnim djelom, učenje vještinama budućnosti.</p>
         </div>
-        <div class="stat">
-          <span class="stat-value">10</span>
-          <span class="stat-label">Polaznika po radionici</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">4</span>
-          <span class="stat-label">Robota s ekspresijama</span>
-        </div>
-        <div class="stat">
-          <span class="stat-value">3</span>
-          <span class="stat-label">Faze programa</span>
-        </div>
+        <a href="#galerija" class="btn btn-light">Pogledaj radionicu u akciji</a>
       </div>
     </section>
 
@@ -188,12 +283,34 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
+    <div class="container footer-grid">
       <div class="footer-brand">
-        <span class="logo">Algoritmija</span>
-        <p>Romeo i Julija: Algoritmi i roboti u umjetnosti</p>
+        <a href="#top" class="logo">
+          <span class="logo-mark" aria-hidden="true">A</span>
+          Algoritmija
+        </a>
+        <p>Romeo i Julija: Algoritmi i roboti u umjetnosti — edukativni program koji spaja kazalište, programiranje i robotiku.</p>
       </div>
-      <p class="footer-copy">&copy; 2026 Algoritmija. Sva prava pridržana.</p>
+      <div class="footer-links">
+        <h3>Program</h3>
+        <ul>
+          <li><a href="#o-projektu">O projektu</a></li>
+          <li><a href="#ciljevi">Ishodi učenja</a></li>
+          <li><a href="#aktivnosti">Kurikulum</a></li>
+          <li><a href="#galerija">Galerija</a></li>
+        </ul>
+      </div>
+      <div class="footer-meta">
+        <h3>Detalji</h3>
+        <ul>
+          <li>Dob: 10–15 godina</li>
+          <li>Do 10 polaznika</li>
+          <li>3 faze · 4 robota</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Algoritmija. Sva prava pridržana.</p>
     </div>
   </footer>
 
