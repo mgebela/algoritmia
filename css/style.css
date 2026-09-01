@@ -691,6 +691,7 @@ ul { list-style: none; }
 }
 .section-statement .container {
   width: min(52rem, 100%);
+  container-type: inline-size;
 }
 .statement-lockup {
   display: flex;
@@ -699,18 +700,21 @@ ul { list-style: none; }
   justify-content: center;
   gap: clamp(0.25rem, 2vw, 0.75rem);
   margin-bottom: 2rem;
+  width: 100%;
   max-width: 100%;
 }
 .statement-word {
   display: block;
   font-family: var(--font-display);
-  font-size: clamp(2rem, calc((100vw - 3rem) / 7.5), 5rem);
+  font-size: clamp(1.35rem, 5.8cqw, 5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
+  width: 100%;
   max-width: 100%;
+  white-space: nowrap;
 }
 .statement-x {
   font-family: var(--font-display);
@@ -1254,7 +1258,7 @@ ul { list-style: none; }
   }
   .section-statement .container { width: 100%; }
   .statement-word {
-    font-size: clamp(1.85rem, calc((100vw - 2rem) / 7.5), 3.25rem);
+    font-size: clamp(1.35rem, 5.8cqw, 3.25rem);
   }
   .statement-x {
     font-size: 1.35rem;
@@ -1279,17 +1283,26 @@ ul { list-style: none; }
 
   /* Ishodi — jedan stupac, puno zraka */
   .outcomes-editorial {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 0;
   }
   .outcome-block--01,
   .outcome-block--02,
   .outcome-block--03,
   .outcome-block--04 {
-    grid-column: 1;
+    grid-column: unset;
+    grid-row: unset;
     padding: 2.25rem 0;
+    padding-left: 0;
+    padding-right: 0;
     border: none;
+    border-left: none;
     border-bottom: 1px solid rgba(13, 13, 13, 0.06);
+  }
+  .outcome-block--02,
+  .outcome-block--04 {
+    padding-top: 2.25rem;
   }
   .outcome-block--04 { border-bottom: none; padding-bottom: 0; }
   .outcome-block--01 { padding-top: 0; }
