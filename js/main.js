@@ -46,11 +46,19 @@ const galleries = {
   predstava: predstavaImages,
 };
 
+function galleryLayoutClass(index) {
+  if (index === 0) return 'gallery-item--hero';
+  if (index === 1) return 'gallery-item--accent';
+  if (index === 2) return 'gallery-item--tall';
+  if (index % 5 === 3) return 'gallery-item--wide';
+  return 'gallery-item--standard';
+}
+
 function buildGallery(containerId, images, galleryKey) {
   const container = document.getElementById(containerId);
   images.forEach((img, i) => {
     const item = document.createElement('div');
-    item.className = 'gallery-item';
+    item.className = `gallery-item ${galleryLayoutClass(i)}`;
     item.innerHTML = `<img src="${img.src}" alt="${img.alt}" loading="lazy">`;
     item.addEventListener('click', () => openLightbox(galleryKey, i));
     container.appendChild(item);
@@ -134,15 +142,6 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowRight') nextImage();
   if (e.key === 'ArrowLeft') prevImage();
 });
-
-/* Announce bar close */
-const announceBar = document.getElementById('announce-bar');
-const announceClose = document.getElementById('announce-close');
-if (announceClose && announceBar) {
-  announceClose.addEventListener('click', () => {
-    announceBar.classList.add('is-hidden');
-  });
-}
 
 /* Header scroll */
 const header = document.querySelector('.site-header');
