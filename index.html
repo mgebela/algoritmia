@@ -27,7 +27,7 @@
         <li><a href="#galerija">Galerija</a></li>
         <li><a href="#organizatori">Organizatori</a></li>
       </ul>
-      <a href="#aktivnosti" class="btn btn-primary btn-sm nav-cta">Pogledaj program</a>
+      <a href="#organizatori" class="btn btn-primary btn-sm nav-cta">Prijavi se</a>
     </nav>
   </header>
 
@@ -37,19 +37,20 @@
       <div class="container">
         <div class="hero-meta reveal">
           <p class="hero-meta-primary">STEM + UMJETNOST</p>
-          <p class="hero-meta-secondary">Dob 10–15 · Maks. 10 polaznika po radionici</p>
+          <p class="hero-meta-secondary hero-meta-secondary--desktop">Dob 10–15 · Maks. 10 polaznika po radionici</p>
         </div>
         <div class="hero-screen-inner">
           <div class="hero-copy reveal">
-            <h1 class="hero-title">Od kazališta do koda.</h1>
+            <h1 class="hero-title">Od kazališta<br>do koda.</h1>
             <p class="hero-subtitle">Algoritmi i roboti u umjetnosti</p>
             <p class="hero-lead">
               Projekt koji spaja kazališnu predstavu o algoritmima i Romeo i Juliji s edukativnom radionicom programiranja i robotike.
             </p>
             <div class="hero-actions">
-              <a href="#aktivnosti" class="btn btn-primary btn-lg">Istraži program</a>
-              <a href="#galerija" class="btn btn-ghost">Pogledaj galeriju</a>
+              <a href="#organizatori" class="btn btn-primary btn-lg">Prijavi se</a>
+              <a href="#o-projektu" class="btn btn-ghost hero-cta-secondary">Saznaj više</a>
             </div>
+            <p class="hero-meta-secondary hero-meta-secondary--mobile">Dob 10–15 · Maks. 10 polaznika</p>
           </div>
           <div class="hero-visual reveal">
             <img src="images/hero.jpg" alt="Učenici na radionici robotike u učionici" width="1200" height="800">
@@ -58,24 +59,29 @@
       </div>
     </section>
 
-    <!-- IDENTITY MARQUEE -->
-    <div class="marquee-band" aria-hidden="true">
+    <!-- IDENTITY MARQUEE — desktop -->
+    <div class="marquee-band marquee-band--desktop" aria-hidden="true">
       <div class="marquee-track">
         <span>Kazalište</span><span class="marquee-sep">—</span>
         <span>Kod</span><span class="marquee-sep">—</span>
-        <span>Pokret</span><span class="marquee-sep">—</span>
-        <span>Zvuk</span><span class="marquee-sep">—</span>
         <span>Robot</span><span class="marquee-sep">—</span>
         <span>Scena</span><span class="marquee-sep">—</span>
         <span>Algoritam</span><span class="marquee-sep">—</span>
+        <span>Pokret</span><span class="marquee-sep">—</span>
         <span>Kazalište</span><span class="marquee-sep">—</span>
         <span>Kod</span><span class="marquee-sep">—</span>
-        <span>Pokret</span><span class="marquee-sep">—</span>
-        <span>Zvuk</span><span class="marquee-sep">—</span>
         <span>Robot</span><span class="marquee-sep">—</span>
         <span>Scena</span><span class="marquee-sep">—</span>
         <span>Algoritam</span><span class="marquee-sep">—</span>
+        <span>Pokret</span><span class="marquee-sep">—</span>
       </div>
+    </div>
+
+    <!-- IDENTITY MARQUEE — mobile (statičan) -->
+    <div class="marquee-band marquee-band--mobile" aria-hidden="true">
+      <p class="marquee-static-row"><span>Kazalište</span><span class="marquee-dot">·</span><span>Kod</span></p>
+      <p class="marquee-static-row"><span>Robot</span><span class="marquee-dot">·</span><span>Scena</span></p>
+      <p class="marquee-static-row"><span>Algoritam</span><span class="marquee-dot">·</span><span>Pokret</span></p>
     </div>
 
     <!-- O PROJEKTU — miran, prozračan -->
@@ -106,25 +112,29 @@
           </p>
         </div>
         <div class="disp-grid reveal">
-          <div class="disp-item">
+          <div class="disp-item disp-item--d">
             <span class="disp-letter">D</span>
             <span class="disp-dash" aria-hidden="true">—</span>
             <span class="disp-word">Doživljaj</span>
+            <p class="disp-desc">Kazališni doživljaj predstave Algoritmija.</p>
           </div>
-          <div class="disp-item">
+          <div class="disp-item disp-item--i">
             <span class="disp-letter">I</span>
             <span class="disp-dash" aria-hidden="true">—</span>
             <span class="disp-word">Istraživanje</span>
+            <p class="disp-desc">Razumijevanje algoritama kroz scenu i priču.</p>
           </div>
-          <div class="disp-item">
+          <div class="disp-item disp-item--s">
             <span class="disp-letter">S</span>
             <span class="disp-dash" aria-hidden="true">—</span>
             <span class="disp-word">Stvaranje</span>
+            <p class="disp-desc">Programiranje i rad s robotima na radionici.</p>
           </div>
-          <div class="disp-item">
+          <div class="disp-item disp-item--p">
             <span class="disp-letter">P</span>
             <span class="disp-dash" aria-hidden="true">—</span>
             <span class="disp-word">Prezentacija</span>
+            <p class="disp-desc">Javna prezentacija rada pred publikom.</p>
           </div>
         </div>
       </div>
@@ -251,10 +261,11 @@
           <article class="phase-row reveal">
             <span class="phase-num">01</span>
             <div class="phase-content">
-              <h3>Predstava i priprema</h3>
+              <h3>Priprema i edukacija</h3>
               <p>Sudionici odgledaju predstavu Algoritmija i kroz razgovor s profesionalcima pripremaju se za radionicu.</p>
             </div>
           </article>
+          <div class="phase-connector" aria-hidden="true"></div>
           <article class="phase-row reveal">
             <span class="phase-num">02</span>
             <div class="phase-content">
@@ -262,6 +273,7 @@
               <p>Polaznici programiraju dio predstave uz LEGO Education robote s izrazima lica i zvukom.</p>
             </div>
           </article>
+          <div class="phase-connector" aria-hidden="true"></div>
           <article class="phase-row reveal">
             <span class="phase-num">03</span>
             <div class="phase-content">
@@ -338,6 +350,14 @@
         </div>
       </div>
     </section>
+
+    <!-- ZAVRŠNI CTA -->
+    <section class="section section-closing-cta" id="prijava">
+      <div class="container">
+        <h2 class="closing-cta-headline reveal">Spremni za<br>nešto drugačije?</h2>
+        <a href="#organizatori" class="btn btn-primary btn-lg closing-cta-btn reveal">Prijavi se</a>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -356,6 +376,7 @@
           <li><a href="#aktivnosti">Kurikulum</a></li>
           <li><a href="#galerija">Galerija</a></li>
           <li><a href="#organizatori">Organizatori</a></li>
+          <li><a href="#prijava">Prijava</a></li>
         </ul>
       </div>
       <div class="footer-meta">
@@ -372,7 +393,7 @@
     </div>
   </footer>
 
-  <a href="#aktivnosti" class="mobile-cta">Pogledaj program</a>
+  <a href="#organizatori" class="mobile-cta">Prijavi se</a>
 
   <div class="lightbox" id="lightbox" hidden>
     <button class="lightbox-close" aria-label="Zatvori">&times;</button>
