@@ -1100,11 +1100,8 @@ ul { list-style: none; }
 @media (max-width: 768px) {
   .container {
     width: 100%;
+    max-width: 100%;
     padding-inline: 1.25rem;
-  }
-
-  .hero-screen .container {
-    container-type: inline-size;
   }
 
   /* Nav — minimalan */
@@ -1151,7 +1148,11 @@ ul { list-style: none; }
     flex-direction: column;
     gap: 1.75rem;
   }
-  .hero-copy { order: 1; }
+  .hero-copy {
+    order: 1;
+    min-width: 0;
+    max-width: 100%;
+  }
   .hero-visual { order: 3; }
   .hero-meta { margin-bottom: 1rem; }
   .hero-meta-primary { font-size: 0.65rem; letter-spacing: 0.16em; }
@@ -1164,15 +1165,14 @@ ul { list-style: none; }
     color: var(--gray-light);
   }
   .hero-title {
-    font-size: clamp(1.4rem, calc(100cqw / 7.5), 2.5rem);
+    font-size: clamp(1.25rem, calc((100vw - 2.5rem) / 9.5), 2.25rem);
     margin-bottom: 0.65rem;
-    line-height: 1.08;
+    line-height: 1.1;
     letter-spacing: -0.02em;
-    max-width: 100%;
   }
   .hero-title-line {
+    display: block;
     white-space: nowrap;
-    max-width: 100%;
   }
   .hero-subtitle {
     font-size: 1rem;
