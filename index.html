@@ -264,7 +264,7 @@
           <h2>Umjetnost i tehnologija u jednom programu</h2>
           <p>Inspiracija klasičnim djelom, učenje vještinama budućnosti.</p>
         </div>
-        <a href="#galerija" class="btn btn-light">Pogledaj radionicu u akciji</a>
+        <a href="#galerija" class="btn btn-light">Pogledaj galeriju</a>
       </div>
     </section>
 
@@ -272,11 +272,20 @@
       <div class="container">
         <div class="section-header reveal">
           <span class="section-label">Galerija</span>
-          <h2>Trenuci s radionice</h2>
-          <p class="section-desc">Pogled u svijet u kojem se kod, roboti i kazalište susreću.</p>
+          <h2>Radionica i predstava</h2>
+          <p class="section-desc">Dva dijela programa — praktičan rad s robotima i kazališna izvedba inspirirana „Romeo i Julijom".</p>
         </div>
-        <div class="gallery" id="gallery">
-          <!-- populated by JS -->
+        <div class="gallery-tabs reveal" role="tablist" aria-label="Odabir galerije">
+          <button class="gallery-tab is-active" role="tab" id="tab-radionica" aria-selected="true" aria-controls="gallery-radionica" data-gallery="radionica">Radionica</button>
+          <button class="gallery-tab" role="tab" id="tab-predstava" aria-selected="false" aria-controls="gallery-predstava" data-gallery="predstava">Predstava</button>
+        </div>
+        <div class="gallery-panel is-active" id="gallery-radionica" role="tabpanel" aria-labelledby="tab-radionica">
+          <p class="gallery-intro">Polaznici programiraju robote, rade u timovima i postavljaju scene iz predstave.</p>
+          <div class="gallery" id="gallery-radionica-grid"></div>
+        </div>
+        <div class="gallery-panel" id="gallery-predstava" role="tabpanel" aria-labelledby="tab-predstava" hidden>
+          <p class="gallery-intro">Kazališna izvedba „Romeo i Julija: Algoritmi i roboti u umjetnosti" — algoritam, glazba i scenski izraz.</p>
+          <div class="gallery" id="gallery-predstava-grid"></div>
         </div>
       </div>
     </section>

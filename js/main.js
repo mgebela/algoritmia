@@ -1,4 +1,4 @@
-const galleryImages = [
+const radionicaImages = [
   { src: 'images/gallery/radionica-01.jpg', alt: 'Početak radionice — predavanje sudionicima' },
   { src: 'images/gallery/radionica-02.jpg', alt: 'Sudionici slušaju upute voditelja' },
   { src: 'images/gallery/radionica-03.jpg', alt: 'Grupni rad u učionici' },
@@ -22,21 +22,74 @@ const galleryImages = [
   { src: 'images/gallery/radionica-21.jpg', alt: 'Robot s mobitelom za izraz lica i zvuk' },
 ];
 
-const gallery = document.getElementById('gallery');
-galleryImages.forEach((img, i) => {
-  const item = document.createElement('div');
-  item.className = 'gallery-item';
-  item.innerHTML = `<img src="${img.src}" alt="${img.alt}" loading="lazy">`;
-  item.addEventListener('click', () => openLightbox(i));
-  gallery.appendChild(item);
+const predstavaImages = [
+  { src: 'images/gallery/predstava-01.jpg', alt: 'Glumac u dramatičnoj pozi uz glazbenika s gitarom' },
+  { src: 'images/gallery/predstava-02.jpg', alt: 'Scenska izvedba ispred projekcije algoritma' },
+  { src: 'images/gallery/predstava-03.jpg', alt: 'Predstava u dvorani s projektorom i publikom' },
+  { src: 'images/gallery/predstava-04.jpg', alt: 'Glumci na pozornici — trenutak iz predstave' },
+  { src: 'images/gallery/predstava-05.jpg', alt: 'Izvođač gestikulira pred projekcijom algoritma i publikom' },
+  { src: 'images/gallery/predstava-06.jpg', alt: 'Kazališna scena s glumcima i scenskom rasvjetom' },
+  { src: 'images/gallery/predstava-07.jpg', alt: 'Interaktivni trenutak između izvođača i publike' },
+  { src: 'images/gallery/predstava-08.jpg', alt: 'Izvođač pred publikom — pogled kroz ogradu dvorane' },
+  { src: 'images/gallery/predstava-09.jpg', alt: 'Scena predstave s projekcijom na platnu' },
+  { src: 'images/gallery/predstava-10.jpg', alt: 'Glumac u crnom pred učenikima i projektorom' },
+  { src: 'images/gallery/predstava-11.jpg', alt: 'Ensemble na sceni — grupna izvedba' },
+  { src: 'images/gallery/predstava-12.jpg', alt: 'Tri glumca s lančićima ispred projekcije algoritma' },
+  { src: 'images/gallery/predstava-13.jpg', alt: 'Dramatičan trenutak iz predstave Algoritmija' },
+  { src: 'images/gallery/predstava-14.jpg', alt: 'Scenski rad glumaca uz glazbenu pratnju' },
+  { src: 'images/gallery/predstava-15.jpg', alt: 'Scena s ležećim glumcem, ansamblom i dijagramom algoritma' },
+  { src: 'images/gallery/predstava-16.jpg', alt: 'Završni trenutak kazališne izvedbe' },
+];
+
+const galleries = {
+  radionica: radionicaImages,
+  predstava: predstavaImages,
+};
+
+function buildGallery(containerId, images, galleryKey) {
+  const container = document.getElementById(containerId);
+  images.forEach((img, i) => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+    item.innerHTML = `<img src="${img.src}" alt="${img.alt}" loading="lazy">`;
+    item.addEventListener('click', () => openLightbox(galleryKey, i));
+    container.appendChild(item);
+  });
+}
+
+buildGallery('gallery-radionica-grid', radionicaImages, 'radionica');
+buildGallery('gallery-predstava-grid', predstavaImages, 'predstava');
+
+/* Gallery tabs */
+const galleryTabs = document.querySelectorAll('.gallery-tab');
+const galleryPanels = document.querySelectorAll('.gallery-panel');
+
+galleryTabs.forEach((tab) => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.gallery;
+
+    galleryTabs.forEach((t) => {
+      const active = t === tab;
+      t.classList.toggle('is-active', active);
+      t.setAttribute('aria-selected', active);
+    });
+
+    galleryPanels.forEach((panel) => {
+      const active = panel.id === `gallery-${target}`;
+      panel.classList.toggle('is-active', active);
+      panel.hidden = !active;
+    });
+  });
 });
 
 /* Lightbox */
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
+let currentGallery = 'radionica';
 let currentIndex = 0;
 
-function openLightbox(index) {
+function openLightbox(galleryKey, index) {
+  currentGallery = galleryKey;
   currentIndex = index;
   updateLightbox();
   lightbox.hidden = false;
@@ -48,19 +101,25 @@ function closeLightbox() {
   document.body.style.overflow = '';
 }
 
+function currentImages() {
+  return galleries[currentGallery];
+}
+
 function updateLightbox() {
-  const img = galleryImages[currentIndex];
+  const img = currentImages()[currentIndex];
   lightboxImg.src = img.src;
   lightboxImg.alt = img.alt;
 }
 
 function nextImage() {
-  currentIndex = (currentIndex + 1) % galleryImages.length;
+  const images = currentImages();
+  currentIndex = (currentIndex + 1) % images.length;
   updateLightbox();
 }
 
 function prevImage() {
-  currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+  const images = currentImages();
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
   updateLightbox();
 }
 
