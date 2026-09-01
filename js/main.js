@@ -135,6 +135,15 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') prevImage();
 });
 
+/* Announce bar close */
+const announceBar = document.getElementById('announce-bar');
+const announceClose = document.getElementById('announce-close');
+if (announceClose && announceBar) {
+  announceClose.addEventListener('click', () => {
+    announceBar.classList.add('is-hidden');
+  });
+}
+
 /* Header scroll */
 const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => {
