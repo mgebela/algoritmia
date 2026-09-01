@@ -46,12 +46,30 @@ const galleries = {
   predstava: predstavaImages,
 };
 
+function isMobileGallery() {
+  return window.matchMedia('(max-width: 768px)').matches;
+}
+
 function galleryLayoutClass(index) {
-  if (index === 0) return 'gallery-item--hero';
-  if (index === 1) return 'gallery-item--accent';
-  if (index === 2) return 'gallery-item--tall';
-  if (index % 5 === 3) return 'gallery-item--wide';
-  return 'gallery-item--standard';
+  if (isMobileGallery()) {
+    const pos = index % 4;
+    if (pos === 0 || pos === 3) return 'gallery-item--mob-hero gallery-item--crop-face';
+    return 'gallery-item--mob-half gallery-item--crop-face';
+  }
+
+  const layouts = [
+    'gallery-item--hero gallery-item--crop-face',
+    'gallery-item--accent gallery-item--crop-top',
+    'gallery-item--tall gallery-item--crop-left',
+    'gallery-item--wide gallery-item--crop-right',
+    'gallery-item--standard',
+    'gallery-item--offset gallery-item--crop-face',
+    'gallery-item--wide gallery-item--crop-left',
+    'gallery-item--standard gallery-item--crop-top',
+    'gallery-item--tall gallery-item--crop-right',
+    'gallery-item--standard',
+  ];
+  return layouts[index % layouts.length];
 }
 
 function buildGallery(containerId, images, galleryKey) {
