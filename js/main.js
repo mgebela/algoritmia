@@ -106,7 +106,9 @@ function openLightbox(galleryKey, index) {
 
 function closeLightbox() {
   lightbox.hidden = true;
-  document.body.style.overflow = '';
+  if (!navLinks.classList.contains('open')) {
+    document.body.style.overflow = '';
+  }
 }
 
 function currentImages() {
@@ -152,12 +154,29 @@ window.addEventListener('scroll', () => {
 /* Mobile nav */
 const toggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
-toggle.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('open');
+const navBackdrop = document.querySelector('.nav-backdrop');
+
+function setNavOpen(open) {
+  navLinks.classList.toggle('open', open);
   toggle.setAttribute('aria-expanded', open);
+  if (navBackdrop) {
+    navBackdrop.classList.toggle('is-visible', open);
+    navBackdrop.hidden = !open;
+  }
+  const lightboxOpen = lightbox && !lightbox.hidden;
+  document.body.style.overflow = open || lightboxOpen ? 'hidden' : '';
+}
+
+toggle.addEventListener('click', () => {
+  setNavOpen(!navLinks.classList.contains('open'));
 });
+
+if (navBackdrop) {
+  navBackdrop.addEventListener('click', () => setNavOpen(false));
+}
+
 navLinks.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => setNavOpen(false));
 });
 
 /* Scroll reveal */
