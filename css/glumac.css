@@ -1,0 +1,30 @@
+.glumac-hero { padding-top: 4.5rem; }
+.glumac-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+}
+.glumac-lead { font-size: 1.25rem; color: var(--graphite); max-width: 38rem; }
+.mock-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+@media (min-width: 800px) {
+  .mock-grid { grid-template-columns: 1fr 1fr; }
+}
+.mock-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.mock-card img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.mock-card figcaption {
+  padding: 0.9rem 1rem 1.1rem;
+  color: var(--ink);
+  font-weight: 600;
+}
+.mock-note { margin-top: 1.5rem; max-width: 40rem; }
