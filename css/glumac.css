@@ -37,3 +37,20 @@
 
 .scene-steps { display: grid; gap: 1rem; }
 @media (min-width: 900px) { .scene-steps { grid-template-columns: 1.1fr 1fr 1fr; } }
+.scene-steps { align-items: stretch; }
+@media (min-width: 900px) {
+  .scene-steps { grid-template-columns: 1fr 1fr 1fr; }
+}
+.scene-steps .mock-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.scene-steps .mock-card img {
+  width: 100%;
+  height: 220px;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.scene-steps .mock-card figcaption { margin-top: auto; }
