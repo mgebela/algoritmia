@@ -8,13 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/mark.jpg">
 </head>
 <body>
   <header class="site-header" id="top">
     <button class="nav-backdrop" type="button" aria-label="Zatvori izbornik" hidden></button>
     <nav class="nav container">
-      <a href="#top" class="logo">Algoritmija</a>
+      <a href="#top" class="logo logo-lockup"><img src="images/mark.jpg" alt="" width="44" height="44"><span>Algoritmija</span></a>
       <button class="nav-toggle" aria-label="Otvori izbornik" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -56,7 +56,7 @@
             <p class="hero-meta-secondary hero-meta-secondary--mobile">Dob 10–15 · Maks. 10 polaznika</p>
           </div>
           <div class="hero-visual reveal">
-            <img src="images/hero.jpg" alt="Učenici na radionici robotike u učionici" width="1200" height="800">
+            <img class="logo-hero" src="images/logo.jpg" alt="Logo Algoritmija, kartonski robot i natpis" width="1176" height="784">
           </div>
         </div>
       </div>
@@ -86,6 +86,19 @@
       <p class="marquee-static-row"><span>Robot</span><span class="marquee-dot">·</span><span>Scena</span></p>
       <p class="marquee-static-row"><span>Algoritam</span><span class="marquee-dot">·</span><span>Pokret</span></p>
     </div>
+
+    <section class="robot-cast" id="glumci">
+      <div class="container">
+        <span class="section-kicker">Glumci</span>
+        <h2 class="robot-cast-title">Dva robota. Jedna scena.</h2>
+        <div class="robot-cast-grid">
+          <a href="robot-glumac.html"><img src="images/glumac/UeN2B.jpg" alt="Romeo ulazi na scenu"></a>
+          <a href="robot-glumac.html"><img src="images/glumac/h6X1d.jpg" alt="Romeo i Julija se susreću"></a>
+          <a href="robot-glumac.html"><img src="images/glumac/MnovZ.jpg" alt="Susret uz statiste"></a>
+        </div>
+        <a class="btn btn-primary" href="robot-glumac.html">Makete glumaca</a>
+      </div>
+    </section>
 
     <!-- O PROJEKTU — miran, prozračan -->
     <section class="section section-about" id="o-projektu">
@@ -368,7 +381,7 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <a href="#top" class="logo logo-light">Algoritmija</a>
+        <a href="#top" class="logo logo-lockup logo-light"><img src="images/mark.jpg" alt="" width="44" height="44"><span>Algoritmija</span></a>
         <p>Projekt Algoritmija — predstava, metodička preporuka i edukativna radionica koja spaja kazalište, programiranje i robotiku.</p>
       </div>
       <div class="footer-links">

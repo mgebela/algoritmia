@@ -1451,3 +1451,50 @@ ul { list-style: none; }
   cursor: pointer;
 }
 .nav-backdrop.is-visible { display: block; }
+
+/* Robot redesign */
+.logo-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--ink);
+}
+.logo-lockup img {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: #f7f1e6;
+}
+.logo-light span { color: var(--warm-white); }
+.logo-hero {
+  border-radius: 1.4rem;
+  background: #f7f1e6;
+  box-shadow: var(--shadow);
+}
+.robot-cast {
+  padding: 3.5rem 0 1rem;
+}
+.robot-cast-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  color: var(--ink);
+  letter-spacing: -0.04em;
+  margin-bottom: 1.25rem;
+}
+.robot-cast-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  margin-bottom: 1.25rem;
+}
+@media (min-width: 800px) {
+  .robot-cast-grid { grid-template-columns: 1.2fr 1fr 1fr; }
+}
+.robot-cast-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 1.1rem;
+}
+.robot-cast .btn { margin-top: 0.4rem; }
