@@ -34,3 +34,6 @@
 .cast-four article { background: var(--surface); border-radius: var(--radius); padding: 1rem; }
 .cast-four span { color: var(--signal-red); font-weight: 700; }
 .cast-four h3 { color: var(--ink); font-family: var(--font-display); margin: 0.3rem 0; }
+
+.scene-steps { display: grid; gap: 1rem; }
+@media (min-width: 900px) { .scene-steps { grid-template-columns: 1.1fr 1fr 1fr; } }
