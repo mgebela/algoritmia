@@ -28,3 +28,9 @@
   font-weight: 600;
 }
 .mock-note { margin-top: 1.5rem; max-width: 40rem; }
+
+.cast-four { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0 0 1.4rem; }
+@media (min-width: 800px) { .cast-four { grid-template-columns: repeat(4, 1fr); } }
+.cast-four article { background: var(--surface); border-radius: var(--radius); padding: 1rem; }
+.cast-four span { color: var(--signal-red); font-weight: 700; }
+.cast-four h3 { color: var(--ink); font-family: var(--font-display); margin: 0.3rem 0; }
